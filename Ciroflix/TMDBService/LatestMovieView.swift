@@ -1,18 +1,18 @@
 //
-//  MovieView.swift
+//  LatestMovieView.swift
 //  Ciroflix
 //
-//  Created by Ciro Vitale on 24/09/2020.
+//  Created by Ciro Vitale on 30/09/2020.
 //  Copyright © 2020 Ciro Vitale. All rights reserved.
 //
 
 import Foundation
 
-class MovieViewModel {
-    private var service = TMDBService()
+class LatestMovieViewModel {
+    private var service = TMDBServiceLatest()
     private var Movies = [Movie]()
     
-    func fetchMoviesData(completion : @escaping () -> ()) {
+    func fetchLatestMoviesData(completion : @escaping () -> ()) {
         service.getMoviesData { [weak self] (Result) in
             
             switch Result {

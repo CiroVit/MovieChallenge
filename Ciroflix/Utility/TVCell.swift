@@ -9,7 +9,8 @@
 import UIKit
 import RealmSwift
 
-class TVCell: UITableViewCell {
+class TVCell: UICollectionViewCell {
+    
     let realm = try! Realm.init()
     var MPoster = UIImageView()
     var MTitle = UILabel()
@@ -17,38 +18,16 @@ class TVCell: UITableViewCell {
     var MDescription = UILabel()
     var MRate = UILabel()
     
-    override init(style:UITableViewCell.CellStyle, reuseIdentifier: String? ) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(MPoster)
-        addSubview(MTitle)
-        addSubview(MYear)
-        addSubview(MDescription)
-        addSubview(MRate)
-//        anchors
-        MPoster.layer.cornerRadius = 10
-        MPoster.clipsToBounds = true
-        MPoster.anchor(top: topAnchor, leading: leadingAnchor, trailing: nil, bottom: bottomAnchor, padding: .init(top:5, left:5, bottom:5,right:0), size: .init(width: 290, height: 290))
-        MTitle.textColor = .black
-        MTitle.backgroundColor = .lightGray
-        MTitle.numberOfLines = 0
-        MTitle.adjustsFontSizeToFitWidth = true
-        MTitle.anchor(top: MPoster.topAnchor, leading:MPoster.trailingAnchor, trailing:trailingAnchor , bottom: nil)
-        MDescription.textColor = .black
-        MDescription.backgroundColor = .gray
-        MDescription.numberOfLines = 0
-        MDescription.adjustsFontSizeToFitWidth = false
-        MDescription.anchor(top: MTitle.bottomAnchor, leading: MPoster.trailingAnchor, trailing: MTitle.trailingAnchor, bottom: nil, size: .init(width: 500, height: 190))
-        MYear.textColor = .white
-        MYear.backgroundColor = .blue
-        MYear.numberOfLines = 0
-        MYear.adjustsFontSizeToFitWidth = true
-        MYear.anchor(top: MDescription.bottomAnchor, leading: MPoster.trailingAnchor, trailing: nil, bottom: MPoster.bottomAnchor ,size: .init(width: 250, height:30))
-        MRate.textColor = .black
-        MRate.backgroundColor = .green
-        MRate.numberOfLines = 0
-        MRate.adjustsFontSizeToFitWidth = true
-        MRate.anchor(top: MDescription.bottomAnchor, leading: MYear.trailingAnchor, trailing: MTitle.trailingAnchor, bottom: MYear.bottomAnchor)
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        contentView.addSubview(MPoster)
+
+//        MPoster.layer.cornerRadius = 10
+//        MPoster.contentMode = .scaleToFill
+        MPoster.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, trailing: contentView.trailingAnchor, bottom: contentView.bottomAnchor)
+
     }
+    
     required init?(coder: NSCoder) {
         fatalError("error")
     }
@@ -57,7 +36,6 @@ class TVCell: UITableViewCell {
     
     func settings(_ movie: Movie){
         Pick(title: movie.title, releaseDate: movie.year, rate: movie.rate, description: movie.overview, poster: movie.posterImage)
-        
     }
    
     private func Pick( title: String?, releaseDate: String?, rate:Double?, description: String?, poster: String?) {
@@ -70,7 +48,6 @@ class TVCell: UITableViewCell {
         url = "https://image.tmdb.org/t/p/w300" + posterAsString
         guard let posterImageURL = URL(string: url) else {
             self.MPoster.image = UIImage(named: "noImageAvailable")
-
             return
         }
         self.MPoster.image = nil
@@ -82,9 +59,7 @@ class TVCell: UITableViewCell {
             
             if let error = error {
                 print("error: \(error.localizedDescription)")
-                
             }
-            
             guard let data = data else {
                 print("empty")
                 return
@@ -109,7 +84,6 @@ class TVCell: UITableViewCell {
         }
         return fixDate
     }
-    
 }
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, trailing: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, padding: UIEdgeInsets = .zero, size: CGSize = .zero) {

@@ -10,12 +10,14 @@
 		40BF8DFB251CA4540050FD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF8DFA251CA4540050FD38 /* AppDelegate.swift */; };
 		40BF8DFD251CA4540050FD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF8DFC251CA4540050FD38 /* SceneDelegate.swift */; };
 		40BF8DFF251CA4540050FD38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF8DFE251CA4540050FD38 /* ViewController.swift */; };
-		40BF8E02251CA4540050FD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BF8E00251CA4540050FD38 /* Main.storyboard */; };
 		40BF8E04251CA4550050FD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BF8E03251CA4550050FD38 /* Assets.xcassets */; };
-		40BF8E07251CA4550050FD38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BF8E05251CA4550050FD38 /* LaunchScreen.storyboard */; };
+		40C140FF2523D86A000B35F0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C140FE2523D86A000B35F0 /* SearchViewController.swift */; };
+		40C24E5A2524B8E8007801F7 /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C24E592524B8E8007801F7 /* ShowDetailsViewController.swift */; };
+		40C24E7C25261906007801F7 /* MovieSearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C24E7B25261906007801F7 /* MovieSearchState.swift */; };
+		40C612292523D51300103678 /* MovieTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C612282523D51300103678 /* MovieTabBarController.swift */; };
 		40C9D239251D0E7300F17AC3 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9D238251D0E7300F17AC3 /* MovieModel.swift */; };
 		40C9D23C251D0FA100F17AC3 /* TMDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9D23B251D0FA100F17AC3 /* TMDBService.swift */; };
-		40C9D23F251D1E8700F17AC3 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9D23E251D1E8700F17AC3 /* MovieView.swift */; };
+		40C9D23F251D1E8700F17AC3 /* PopularMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9D23E251D1E8700F17AC3 /* PopularMovieView.swift */; };
 		40C9D246251E07EA00F17AC3 /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9D245251E07EA00F17AC3 /* TVCell.swift */; };
 		40C9D29C2520E81900F17AC3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C9D2692520E0C700F17AC3 /* Realm.framework */; };
 		40C9D2A32520EA5700F17AC3 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9D2A22520EA5700F17AC3 /* RealmDB.swift */; };
@@ -28,13 +30,16 @@
 		40BF8DFA251CA4540050FD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40BF8DFC251CA4540050FD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		40BF8DFE251CA4540050FD38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		40BF8E01251CA4540050FD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40BF8E03251CA4550050FD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40BF8E06251CA4550050FD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40BF8E08251CA4550050FD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C140FE2523D86A000B35F0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		40C24E592524B8E8007801F7 /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsViewController.swift; sourceTree = "<group>"; };
+		40C24E7B25261906007801F7 /* MovieSearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchState.swift; sourceTree = "<group>"; };
+		40C612282523D51300103678 /* MovieTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabBarController.swift; sourceTree = "<group>"; };
 		40C9D238251D0E7300F17AC3 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		40C9D23B251D0FA100F17AC3 /* TMDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBService.swift; sourceTree = "<group>"; };
-		40C9D23E251D1E8700F17AC3 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		40C9D23E251D1E8700F17AC3 /* PopularMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieView.swift; sourceTree = "<group>"; };
 		40C9D245251E07EA00F17AC3 /* TVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
 		40C9D2692520E0C700F17AC3 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C9D2A22520EA5700F17AC3 /* RealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDB.swift; sourceTree = "<group>"; };
@@ -76,20 +81,55 @@
 		40BF8DF9251CA4540050FD38 /* Ciroflix */ = {
 			isa = PBXGroup;
 			children = (
-				40BF8DFA251CA4540050FD38 /* AppDelegate.swift */,
-				40BF8DFC251CA4540050FD38 /* SceneDelegate.swift */,
-				40BF8DFE251CA4540050FD38 /* ViewController.swift */,
-				40BF8E00251CA4540050FD38 /* Main.storyboard */,
+				40C24E442524A047007801F7 /* Utility */,
+				40C24E432524A00A007801F7 /* TMDBService */,
+				40C24E4225249FF1007801F7 /* Controllers */,
+				40C24E4125249FDF007801F7 /* Delegates */,
 				40BF8E03251CA4550050FD38 /* Assets.xcassets */,
 				40BF8E05251CA4550050FD38 /* LaunchScreen.storyboard */,
 				40BF8E08251CA4550050FD38 /* Info.plist */,
-				40C9D238251D0E7300F17AC3 /* MovieModel.swift */,
-				40C9D23B251D0FA100F17AC3 /* TMDBService.swift */,
-				40C9D23E251D1E8700F17AC3 /* MovieView.swift */,
-				40C9D245251E07EA00F17AC3 /* TVCell.swift */,
-				40C9D2A22520EA5700F17AC3 /* RealmDB.swift */,
 			);
 			path = Ciroflix;
+			sourceTree = "<group>";
+		};
+		40C24E4125249FDF007801F7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				40BF8DFA251CA4540050FD38 /* AppDelegate.swift */,
+				40BF8DFC251CA4540050FD38 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		40C24E4225249FF1007801F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40C612282523D51300103678 /* MovieTabBarController.swift */,
+				40C140FE2523D86A000B35F0 /* SearchViewController.swift */,
+				40BF8DFE251CA4540050FD38 /* ViewController.swift */,
+				40C24E592524B8E8007801F7 /* ShowDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		40C24E432524A00A007801F7 /* TMDBService */ = {
+			isa = PBXGroup;
+			children = (
+				40C9D23B251D0FA100F17AC3 /* TMDBService.swift */,
+				40C9D23E251D1E8700F17AC3 /* PopularMovieView.swift */,
+			);
+			path = TMDBService;
+			sourceTree = "<group>";
+		};
+		40C24E442524A047007801F7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				40C9D238251D0E7300F17AC3 /* MovieModel.swift */,
+				40C9D245251E07EA00F17AC3 /* TVCell.swift */,
+				40C9D2A22520EA5700F17AC3 /* RealmDB.swift */,
+				40C24E7B25261906007801F7 /* MovieSearchState.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		C2E5A62C0F7D7EA8A58E41C2 /* Pods */ = {
@@ -170,9 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40BF8E07251CA4550050FD38 /* LaunchScreen.storyboard in Resources */,
 				40BF8E04251CA4550050FD38 /* Assets.xcassets in Resources */,
-				40BF8E02251CA4540050FD38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C24E7C25261906007801F7 /* MovieSearchState.swift in Sources */,
+				40C140FF2523D86A000B35F0 /* SearchViewController.swift in Sources */,
 				40C9D246251E07EA00F17AC3 /* TVCell.swift in Sources */,
 				40C9D23C251D0FA100F17AC3 /* TMDBService.swift in Sources */,
-				40C9D23F251D1E8700F17AC3 /* MovieView.swift in Sources */,
+				40C9D23F251D1E8700F17AC3 /* PopularMovieView.swift in Sources */,
+				40C24E5A2524B8E8007801F7 /* ShowDetailsViewController.swift in Sources */,
+				40C612292523D51300103678 /* MovieTabBarController.swift in Sources */,
 				40C9D239251D0E7300F17AC3 /* MovieModel.swift in Sources */,
 				40BF8DFF251CA4540050FD38 /* ViewController.swift in Sources */,
 				40BF8DFB251CA4540050FD38 /* AppDelegate.swift in Sources */,
@@ -239,14 +281,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		40BF8E00251CA4540050FD38 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				40BF8E01251CA4540050FD38 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		40BF8E05251CA4550050FD38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

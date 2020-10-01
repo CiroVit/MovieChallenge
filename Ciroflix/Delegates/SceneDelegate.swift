@@ -19,13 +19,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-         let navController = UINavigationController(rootViewController: ViewController())
-        navController.navigationBar.prefersLargeTitles = true
-        
+    
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = navController
+        window?.rootViewController = createTabbar()
+        UITabBar.appearance().tintColor = UIColor(red: 0.13, green: 0.24, blue: 0.23, alpha: 1.00)
+        UITabBar.appearance().barTintColor = UIColor(red: 0.25, green: 0.68, blue: 0.66, alpha: 1.00)
+        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 0.65, green: 0.96, blue: 0.95, alpha: 1.00)
         window?.makeKeyAndVisible()
+    }
+    
+    func SearchNCStuff() -> UINavigationController {
+        let searchVC = SearchViewController()
+        searchVC.title = "Search"
+        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        
+        return UINavigationController(rootViewController: searchVC)
+    }
+    
+    func MovieNCStuff() -> UINavigationController {
+        let movieVC = ViewController()
+        movieVC.title = "Movies"
+        movieVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        
+        return UINavigationController(rootViewController: movieVC)
+    }
+    
+    func createTabbar() -> UITabBarController {
+        let tabBar = UITabBarController()
+        UITabBar.appearance().tintColor = .white
+        tabBar.viewControllers = [MovieNCStuff(), SearchNCStuff()]
+        return tabBar
     }
 
     @available(iOS 13.0, *)
